@@ -235,7 +235,8 @@ airflowLocalSettings: |-
 rbac:
   # Specifies whether RBAC resources should be created
   create: true
-  createSCCRoleBinding: false
+  #BK changed:
+  createSCCRoleBinding: true
 
 # Airflow executor
 # One of: LocalExecutor, LocalKubernetesExecutor, CeleryExecutor, KubernetesExecutor, CeleryKubernetesExecutor

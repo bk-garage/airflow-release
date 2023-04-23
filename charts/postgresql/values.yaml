@@ -451,7 +451,7 @@ primary:
   ##
   podSecurityContext:
     enabled: true
-    fsGroup: 1001
+    #BK fsGroup: 1001
   ## Container Security Context
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
   ## @param primary.containerSecurityContext.enabled Enable container security context
@@ -459,7 +459,7 @@ primary:
   ##
   containerSecurityContext:
     enabled: true
-    runAsUser: 1001
+    #BK runAsUser: 1001
   ## @param primary.hostAliases PostgreSQL primary pods host aliases
   ## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
   ##
@@ -788,7 +788,7 @@ readReplicas:
   ##
   podSecurityContext:
     enabled: true
-    fsGroup: 1001
+    #BK fsGroup: 1001
   ## Container Security Context
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
   ## @param readReplicas.containerSecurityContext.enabled Enable container security context
@@ -796,7 +796,7 @@ readReplicas:
   ##
   containerSecurityContext:
     enabled: true
-    runAsUser: 1001
+    #BK runAsUser: 1001
   ## @param readReplicas.hostAliases PostgreSQL read only pods host aliases
   ## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
   ##
@@ -1258,7 +1258,7 @@ metrics:
   ##
   containerSecurityContext:
     enabled: true
-    runAsUser: 1001
+    #BK runAsUser: 1001
     runAsNonRoot: true
   ## Configure extra options for PostgreSQL Prometheus exporter containers' liveness, readiness and startup probes
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes

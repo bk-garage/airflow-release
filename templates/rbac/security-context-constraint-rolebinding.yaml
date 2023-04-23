@@ -44,6 +44,17 @@ roleRef:
   kind: ClusterRole
   name: system:openshift:scc:anyuid
 subjects:
+  #BK added:
+  - kind: ServiceAccount
+    name: {{ include "redis.serviceAccountName" . }}
+    namespace: "{{ .Release.Namespace }}"
+  - kind: ServiceAccount
+    name: {{ include "dagProcessor.serviceAccountName" . }}
+    namespace: "{{ .Release.Namespace }}"
+  # - kind: ServiceAccount
+  #   name: {{ include "pgbouncer.serviceAccountName" . }}
+  #   namespace: "{{ .Release.Namespace }}"
+  # -------
   - kind: ServiceAccount
     name: {{ include "webserver.serviceAccountName" . }}
     namespace: "{{ .Release.Namespace }}"
